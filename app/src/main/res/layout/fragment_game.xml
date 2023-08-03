@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_game">
+    
+    <FrameLayout
+        android:id="@+id/playerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/player"
+            android:src="@drawable/img_player"
+            android:layout_width="70dp"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+            android:layout_height="100dp"/>
+        
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/planetsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/starsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/heartsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/energyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.rocket.game.core.library.CustomImageButton
+        android:id="@+id/buttonHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/button_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/livesLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonHome"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome"
+        app:layout_constraintTop_toTopOf="@+id/buttonHome" />
+
+    <TextView
+        android:id="@+id/stars"
+        style="@style/BasicText"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_stars"
+        android:paddingEnd="25dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="20003" />
+
+    <TextView
+        android:id="@+id/energy"
+        style="@style/BasicText"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_energy"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/stars"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="203" />
+
+    <com.rocket.game.core.library.CustomImageButton
+        android:id="@+id/buttonBuy"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/button_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/energy"
+        app:layout_constraintStart_toStartOf="@+id/energy"
+        app:layout_constraintTop_toTopOf="@+id/energy" />
+
+    <com.rocket.game.core.library.CustomImageButton
+        android:id="@+id/button_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:src="@drawable/button_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.rocket.game.core.library.CustomImageButton
+        android:id="@+id/button_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        android:rotationY="180"
+        android:src="@drawable/button_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
